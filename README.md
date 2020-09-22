@@ -23,8 +23,11 @@ The high-level workflow is (this is evolving as we build and learn from this pro
 	a. They do assume that the nested ESXi image is downloaded to a local repository. 
 	b. 
 
-......More documentation updates to come.......
+......More documentation updates to come......
 
 
+Once these nested esxi hosts are deployed; I noticed that don't take my num-cpus and mem/ram parameter. This seems to be a bug. For now I simply use the govc cli command to configure the right cpus and memory
 
+govc vm.power -off /ACE-DC/vm/esxi-lab2-1  /ACE-DC/vm/esxi-lab2-2 /ACE-DC/vm/esxi-lab2-3 && sleep 10 && govc vm.change -m 65536 -c 16 -vm /ACE-DC/vm/esxi-lab2-1 && govc vm.change -m 65536 -c 16 -vm /ACE-DC/vm/esxi-lab2-2 && govc vm.change -m 65536 -c 16 -vm /ACE-DC/vm/esxi-lab2-3 && sleep 10 && govc vm.power -on /ACE-DC/vm/esxi-lab2-1  /ACE-DC/vm/esxi-lab2-2 /ACE-DC/vm/esxi-lab2-3
 
+The above command will shutdown the newly created hosts, change the configuration to use 16 CPUs and 64 GB of memory per host and then restart them.
