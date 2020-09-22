@@ -12,16 +12,16 @@ The high-level workflow is (this is evolving as we build and learn from this pro
 
 
 1. This is a Nested Deployment and requires the following to be already in place
-   	*. Physical Compute: ESXi Physcial Host(s) are already deployed with ESXi 6.x? For my environment I have two physcial servers with ESXi 6.7 installed. 
-	*. vCenter is configured: vCenter is installed to leverage the vCenter APIs to deploy the nested ESXi hosts
-	*. Storage: Storage is required to be attached to this infrastructure; I'm using locally attached storage to each of the ESXi hosts. Then on one of the hosts I created a NFS storage using FreeNAS. 
-	*. Networking: For the nested environment, I wanted to use VLAN tagging and for that I setup VyOS router. The network topology assumes all ESXi hosts are using VLAN id 2 and a network is already defined. 
-	*. Other services: This environment uses AD, DNS, NTP and for that we used an existing Windows Server template to act as a jumpbox. 
-	*. Terraform server: Installed an Ubuntu server as a Terraform server that also has Go programming language and govomi and govc library
+   	* Physical Compute: ESXi Physcial Host(s) are already deployed with ESXi 6.x? For my environment I have two physcial servers with ESXi 6.7 installed. 
+	* vCenter is configured: vCenter is installed to leverage the vCenter APIs to deploy the nested ESXi hosts
+	* Storage: Storage is required to be attached to this infrastructure; I'm using locally attached storage to each of the ESXi hosts. Then on one of the hosts I created a NFS storage using FreeNAS. 
+	* Networking: For the nested environment, I wanted to use VLAN tagging and for that I setup VyOS router. The network topology assumes all ESXi hosts are using VLAN id 2 and a network is already defined. 
+	* Other services: This environment uses AD, DNS, NTP and for that we used an existing Windows Server template to act as a jumpbox. 
+	* Terraform server: Installed an Ubuntu server as a Terraform server that also has Go programming language and govomi and govc library
 	
 2. Once the above are in place, you can use the terraform templates
-	*. They do assume that the nested ESXi image is downloaded to a local repository. 
-	*. 
+	* They do assume that the nested ESXi image is downloaded to a local repository. 
+	* T....
 
 ......More documentation updates to come......
 
