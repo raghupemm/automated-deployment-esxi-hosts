@@ -9,7 +9,8 @@ vm-ram               = "65536"
 #vm-guest-id          = "vmkernel65Guest"
 vm-guest-id          = "other3xLinux64Guest"
 vm-name		     = "esxi-lab2"
-vm-guest-ipaddress  = "192.168.2.1"
+vm-guest-ipaddress  = "192.168.2.1" #this is the prefix, for example this will result in three hosts with
+# IP addresses 192.168.2.11 , 192.168.2.12 and 192.168.2.13 (because of the vm-count is set to 3) 
 vsphere-host         = "10.176.1.31"
 vm-folder            = "lab2"
 vm-rpool             = "rp-lab2"
